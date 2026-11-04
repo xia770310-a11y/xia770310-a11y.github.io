@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Mo - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --accent-color: #0056b3;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --text-muted: #666666;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #66b2ff;
+            --card-bg: #1e1e1e;
+            --border-color: #333333;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+            }
+            .item-date {
+                margin-bottom: 0.3rem;
+            }
+            .theme-toggle {
+                position: relative;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+            <h1>Daniel Mo</h1>
+            <p class="subtitle">Physics & Computer Science Student | HKUST Dual Degree</p>
+            <div class="contact-links">
+                <a href="mailto:dmo@connect.ust.hk">Email</a>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Portfolio</a>
+                <span style="color: var(--text-muted); margin: 0 10px;">|</span>
+                <span style="color: var(--text-muted);">+852 5547 8048</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Hong Kong University of Science and Technology (HKUST)</span>
+                    <span class="item-date">Current</span>
+                </div>
+                <div class="item-subtitle">Dual Degree Program in Management and Technology (Computer Science & undeclared BBA)</div>
+                <ul>
+                    <li>Planning to add a Math major/minor.</li>
+                    <li>Completed HKUST MATH 1020 (Level 2) in Year 10, earning 4 university credits.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Po Leung Kuk Choi Kai Yau School</span>
+                    <span class="item-date">Graduated</span>
+                </div>
+                <div class="item-subtitle">IB Bilingual Diploma (43 points) | IGCSE (9A*s)</div>
+                <ul>
+                    <li>HL in Maths AA, Physics, and Chemistry.</li>
+                    <li>IGCSE: 9A*s including 98 PUM in Additional Mathematics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Awards & Recognition</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">International Young Physicist's Tournament (IYPT)</span>
+                    <span class="item-date">2025</span>
+                </div>
+                <div class="item-subtitle">Bronze Medalist (12th out of 35 countries)</div>
+                <ul>
+                    <li>Engaged in real-time physics debates, read research papers, designed experiments, and used Python for simulation and 3D design.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Imperial College London</span>
+                    <span class="item-date">Offer Holder</span>
+                </div>
+                <div class="item-subtitle">Offer for Physics</div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">HKUST Physics Olympiad Training Program</span>
+                    <span class="item-date"></span>
+                </div>
+                <div class="item-subtitle">Qualified to Phase 2 (Top 30 of 80+ competitors)</div>
+                <ul>
+                    <li>Developed olympiad-level problem-solving skills and learned first-year university physics.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">PLKCKY Scholarships</span>
+                    <span class="item-date">Y9, Y10, Y11, Y12</span>
+                </div>
+                <div class="item-subtitle">Mathematics & Science Scholarships</div>
+                <ul>
+                    <li>Selected as the best in the subject in the cohort (1 person per year).</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Big Bei Math Competition</span>
+                    <span class="item-date"></span>
+                </div>
+                <div class="item-subtitle">Preliminary Round First Class Honours</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience & Activities</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">HKSTP Internship</span>
+                </div>
+                <ul>
+                    <li>Participated in product design, collaboration, and pitching.</li>
+                    <li>Visited tech startups and biotechnology labs on-site.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Quantitative Trading & Self-Study</span>
+                </div>
+                <ul>
+                    <li>Self-studied quant probability questions, Codeforces problems, and stock pitching over the summer.</li>
+                    <li>Passed Wincent's quantitative trading internship online assessment; interview scheduled.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Leadership Roles (PLKCKY)</span>
+                </div>
+                <ul>
+                    <li><strong>House Captain:</strong> Selected as 1 of 8 students in a grade of 80+ to organize large-scale intra-school events and competitions.</li>
+                    <li><strong>University Guidance Ambassador:</strong> Chosen as 1 of 2 students in the grade to act as a guide for university professors and representatives.</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Self-Employed Mathematics Tutor</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python (Scientific Computing)</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Machine Learning / AI</span>
+                <span class="skill-tag">Fusion 360 / 3D Printing</span>
+                <span class="skill-tag">Linux / Unix</span>
+                <span class="skill-tag">C++ (Codeforces/LeetCode)</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Other</h2>
+            <ul>
+                <li>Passed ATCL piano exam at Y7 (2021).</li>
+                <li>Languages: Native Cantonese, Fluent English & Mandarin.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+        });
+    </script>
+</body>
+</html>
